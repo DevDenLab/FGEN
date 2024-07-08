@@ -12,3 +12,13 @@ def meeting_details(request):
 
 def aboutus(request):
     return render(request, 'Aboutus.html')
+
+def contactus(request):
+    flag = 0
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        
+    return render(request, 'Contactus.html')

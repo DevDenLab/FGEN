@@ -11,8 +11,8 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li><a href="{% url 'meeting' %}">Meetings</a></li>
+                        <li class="scroll-to-section"><a href={% url 'index'%} class="active">Home</a></li>
+                        {% comment %} <li><a href="{% url 'meeting' %}">Meetings</a></li>
                         <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Pages</a>
@@ -21,11 +21,26 @@
                                 <li><a href="{% url 'meeting_details' %}">Meeting Details</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
+                        <li class="scroll-to-section"><a href="#courses">Courses</a></li>  {% endcomment %}
                         {% comment %} <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                          {% endcomment %}
                         <li>
                             <a href="{% url 'aboutus' %}">About us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'aboutus' %}">Programs</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'aboutus' %}">Resources</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'aboutus' %}">Events</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'aboutus' %}">Get Involved</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contactus' %}">Contact us</a>
                         </li>
                         <li class="scroll-to-section">
                             <div class="search-icon">
