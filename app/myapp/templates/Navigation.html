@@ -11,7 +11,7 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href={% url 'index'%} class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href={% url 'index'%} class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
                         {% comment %} <li><a href="{% url 'meeting' %}">Meetings</a></li>
                         <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
@@ -25,22 +25,22 @@
                         {% comment %} <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                          {% endcomment %}
                         <li>
-                            <a href="{% url 'aboutus' %}">About us</a>
+                            <a href="{% url 'aboutus' %}" class = "{% if active_page == 'about' %}active{% endif %}">About us</a>
                         </li>
                         <li>
-                            <a href="{% url 'aboutus' %}">Programs</a>
+                            <a href="{% url 'programs' %}" class = "{% if active_page == 'programs' %}active{% endif %}">Programs</a>
                         </li>
                         <li>
-                            <a href="{% url 'aboutus' %}">Resources</a>
+                            <a href="{% url 'resources' %}" class = "{% if active_page == 'resources' %}active{% endif %}">Resources</a>
                         </li>
                         <li>
-                            <a href="{% url 'aboutus' %}">Events</a>
+                            <a href="{% url 'events' %}" class = "{% if active_page == 'events' %}active{% endif %}">Events</a>
                         </li>
                         <li>
-                            <a href="{% url 'aboutus' %}">Get Involved</a>
+                            <a href="{% url 'GetInvolved' %}" class = "{% if active_page == 'GetInvolved' %}active{% endif %}">Get Involved</a>
                         </li>
                         <li>
-                            <a href="{% url 'contactus' %}">Contact us</a>
+                            <a href="{% url 'contactus' %}" class = "{% if active_page == 'contact' %}active{% endif %}">Contact us</a>
                         </li>
                         <li class="scroll-to-section">
                             <div class="search-icon">
