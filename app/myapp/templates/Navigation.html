@@ -42,12 +42,29 @@
                         <li>
                             <a href="{% url 'contactus' %}" class = "{% if active_page == 'contact' %}active{% endif %}">Contact us</a>
                         </li>
-                        <li class="scroll-to-section">
-                            <div class="search-icon">
-                                <input type="text" placeholder="Search...">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </div>
+                        <li>
+                            <a href="#" class = "{% if active_page == 'search' %}active{% endif %}">Search</a>
+
+                            {% comment %} <div class="search-icon"> {% endcomment %}
+                                {% comment %} <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button> {% endcomment %}
+                            {% comment %} </div> {% endcomment %}
                         </li>
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="#">Profile</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                        {% endif %}
                     </ul>        
                     <a class='menu-trigger'>
                         <span>Menu</span>
