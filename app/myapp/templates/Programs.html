@@ -20,7 +20,7 @@
                     <div class="price">
                       <span>${{ program.price }}</span>
                     </div>
-                    <a href="meeting-details.html"><img src="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" alt="{{ program.title }}"></a>
+                    <a href="meeting-details.html"><img src="{{program.image.url}}" alt="{{ program.title }}"></a>
                   </div>
                   <div class="down-content" style="background-color:#e7cf1e;">
                     <a href="meeting-details.html"><h4>{{ program.title }}</h4></a>

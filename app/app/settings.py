@@ -127,8 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static", BASE_DIR / "myapp/static"]
-
+STATICFILES_DIRS = [BASE_DIR / "myapp/static"]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -142,3 +142,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tatvajoshi2000@gmail.com'
 EMAIL_HOST_PASSWORD = 'ibet sjez nudh wgll'
 DEFAULT_FROM_EMAIL = 'tatvajoshi2000@gmail.com'
+
+# URL prefix for media files
+MEDIA_URL = '/media/'
+
+# Path to the directory where Django will store uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp','static','images')
