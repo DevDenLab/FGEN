@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
+from .models import Program
 
  # Get the current date
 current_date = date.today()
@@ -57,4 +58,5 @@ def resources(request):
     return render(request, 'Resources.html', {'active_page': 'resources', 'current_year': current_year})
 
 def programs(request):
-    return render(request,'Programs.html', {'active_page': 'programs', 'current_year': current_year})
+    programs = Program.objects.all()
+    return render(request, 'Programs.html', {'programs': programs})

@@ -1,5 +1,43 @@
 {% extends "Base.html" %}
 {% load static %}
+{% block title %}FGEN - Programs{% endblock %}
+
+{% block content %}
+<section class="upcoming-meetings" id="meetings">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2 class="text-black">PROGRAMS</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row">
+            {% for program in programs %}
+              <div class="col-lg-4">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>${{ program.price }}</span>
+                    </div>
+                    <a href="meeting-details.html"><img src="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" alt="{{ program.title }}"></a>
+                  </div>
+                  <div class="down-content" style="background-color:#e7cf1e;">
+                    <a href="meeting-details.html"><h4>{{ program.title }}</h4></a>
+                    <p>{{ program.description }}</p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% comment %} {% extends "Base.html" %}
+{% load static %}
 {% block title %}FGEN - Home{% endblock %}
 
 {% block content%}
@@ -26,7 +64,7 @@
               <a href="meetings.html">All Upcoming Meetings</a>
             </div>
           </div>
-        </div> {% endcomment %}
+        </div> 
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-4">
@@ -40,7 +78,7 @@
                 <div class="down-content" style="background-color:#e7cf1e;">
                   {% comment %} <div class="date">
                     <h6>Nov <span>10</span></h6>
-                  </div> {% endcomment %}
+                  </div> 
                   <a href="meeting-details.html"><h4>Exciting Discovery</h4></a>
                   <p>Embark on a fascinating journey of exploration.</p>
                 </div>
@@ -57,7 +95,7 @@
                 <div class="down-content" style="background-color:#e7cf1e;">
                   {% comment %} <div class="date">
                     <h6>Nov <span>24</span></h6>
-                  </div> {% endcomment %}
+                  </div> 
                   <a href="meeting-details.html"><h4>Mind-opening Experience</h4></a>
                   <p>Uncover the mysteries hidden within the brain.</p>
                 </div>
@@ -82,4 +120,4 @@
       </div>
     </div>
   </section>
-{% endblock%}
+{% endblock%} {% endcomment %}
